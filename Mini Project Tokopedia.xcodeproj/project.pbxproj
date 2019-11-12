@@ -3,27 +3,75 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		154BD948237A67340059244C /* TokpedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154BD947237A67340059244C /* TokpedResponse.swift */; };
+		154BD94A237A67EA0059244C /* TokpedHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154BD949237A67EA0059244C /* TokpedHeader.swift */; };
+		154BD94C237A68830059244C /* TokpedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154BD94B237A68830059244C /* TokpedError.swift */; };
+		154BD951237A6B4C0059244C /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154BD950237A6B4C0059244C /* NetworkProvider.swift */; };
+		154BD953237A6B790059244C /* RequestEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154BD952237A6B790059244C /* RequestEncoding.swift */; };
+		154BD955237A6C4A0059244C /* ProductNetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154BD954237A6C4A0059244C /* ProductNetworkProvider.swift */; };
+		154BD957237A8A870059244C /* NetworkConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154BD956237A8A870059244C /* NetworkConfiguration.swift */; };
+		154BD95A237A8C880059244C /* BundleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154BD959237A8C880059244C /* BundleExtension.swift */; };
+		154BD95C237A8FEE0059244C /* MapperExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154BD95B237A8FEE0059244C /* MapperExtension.swift */; };
+		154BD961237A91E10059244C /* RxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154BD960237A91E10059244C /* RxViewModel.swift */; };
+		154BD963237A92190059244C /* Paginatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154BD962237A92190059244C /* Paginatable.swift */; };
+		154BD965237A9D230059244C /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154BD964237A9D230059244C /* NetworkError.swift */; };
+		154BD967237A9F540059244C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154BD966237A9F540059244C /* AppCoordinator.swift */; };
+		154BD969237A9FA10059244C /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154BD968237A9FA10059244C /* Coordinator.swift */; };
+		154BD96B237AA0440059244C /* SearchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154BD96A237AA0440059244C /* SearchCoordinator.swift */; };
+		154BD96F237AA79E0059244C /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154BD96E237AA79E0059244C /* R.generated.swift */; };
+		154BD971237AB62F0059244C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154BD970237AB62F0059244C /* SceneDelegate.swift */; };
+		15C75E7B2375163800BFFB5E /* ProductItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C75E7A2375163800BFFB5E /* ProductItemView.swift */; };
+		15C75E7D2375168000BFFB5E /* ProductItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15C75E7C2375168000BFFB5E /* ProductItemView.xib */; };
+		15C75E8323751DFD00BFFB5E /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15C75E8223751DFD00BFFB5E /* Search.storyboard */; };
+		15C75E8523751E2D00BFFB5E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C75E8423751E2D00BFFB5E /* SearchViewController.swift */; };
+		15C75E8723751E4100BFFB5E /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C75E8623751E4100BFFB5E /* SearchViewModel.swift */; };
+		15C75E8A23751ECB00BFFB5E /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C75E8923751ECB00BFFB5E /* Product.swift */; };
 		15D3720F23750AF500682D2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3720E23750AF500682D2B /* AppDelegate.swift */; };
-		15D3721123750AF500682D2B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3721023750AF500682D2B /* SceneDelegate.swift */; };
 		15D3721323750AF500682D2B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D3721223750AF500682D2B /* ViewController.swift */; };
 		15D3721623750AF500682D2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15D3721423750AF500682D2B /* Main.storyboard */; };
 		15D3721823750AF800682D2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15D3721723750AF800682D2B /* Assets.xcassets */; };
 		15D3721B23750AF800682D2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15D3721923750AF800682D2B /* LaunchScreen.storyboard */; };
+		9F8BFE8153958F679EBD44B3 /* Pods_Mini_Project_Tokopedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A16752FD8B1F10E5D0AC336 /* Pods_Mini_Project_Tokopedia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		154BD947237A67340059244C /* TokpedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokpedResponse.swift; sourceTree = "<group>"; };
+		154BD949237A67EA0059244C /* TokpedHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokpedHeader.swift; sourceTree = "<group>"; };
+		154BD94B237A68830059244C /* TokpedError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokpedError.swift; sourceTree = "<group>"; };
+		154BD950237A6B4C0059244C /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		154BD952237A6B790059244C /* RequestEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestEncoding.swift; sourceTree = "<group>"; };
+		154BD954237A6C4A0059244C /* ProductNetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductNetworkProvider.swift; sourceTree = "<group>"; };
+		154BD956237A8A870059244C /* NetworkConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfiguration.swift; sourceTree = "<group>"; };
+		154BD959237A8C880059244C /* BundleExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtension.swift; sourceTree = "<group>"; };
+		154BD95B237A8FEE0059244C /* MapperExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperExtension.swift; sourceTree = "<group>"; };
+		154BD960237A91E10059244C /* RxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxViewModel.swift; sourceTree = "<group>"; };
+		154BD962237A92190059244C /* Paginatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paginatable.swift; sourceTree = "<group>"; };
+		154BD964237A9D230059244C /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		154BD966237A9F540059244C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		154BD968237A9FA10059244C /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		154BD96A237AA0440059244C /* SearchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCoordinator.swift; sourceTree = "<group>"; };
+		154BD96E237AA79E0059244C /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		154BD970237AB62F0059244C /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		15C75E7A2375163800BFFB5E /* ProductItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemView.swift; sourceTree = "<group>"; };
+		15C75E7C2375168000BFFB5E /* ProductItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductItemView.xib; sourceTree = "<group>"; };
+		15C75E8223751DFD00BFFB5E /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		15C75E8423751E2D00BFFB5E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		15C75E8623751E4100BFFB5E /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		15C75E8923751ECB00BFFB5E /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		15D3720B23750AF500682D2B /* Mini Project Tokopedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mini Project Tokopedia.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		15D3720E23750AF500682D2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		15D3721023750AF500682D2B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		15D3721223750AF500682D2B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		15D3721523750AF500682D2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		15D3721723750AF800682D2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15D3721A23750AF800682D2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15D3721C23750AF800682D2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A16752FD8B1F10E5D0AC336 /* Pods_Mini_Project_Tokopedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mini_Project_Tokopedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3F6DE499B0AB0C86349244F /* Pods-Mini Project Tokopedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mini Project Tokopedia.debug.xcconfig"; path = "Target Support Files/Pods-Mini Project Tokopedia/Pods-Mini Project Tokopedia.debug.xcconfig"; sourceTree = "<group>"; };
+		C48A7B7BA3DCB74DADC5E185 /* Pods-Mini Project Tokopedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mini Project Tokopedia.release.xcconfig"; path = "Target Support Files/Pods-Mini Project Tokopedia/Pods-Mini Project Tokopedia.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +79,150 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F8BFE8153958F679EBD44B3 /* Pods_Mini_Project_Tokopedia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07B4947A954FE01420687CA2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4A16752FD8B1F10E5D0AC336 /* Pods_Mini_Project_Tokopedia.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		154BD946237A67220059244C /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				154BD947237A67340059244C /* TokpedResponse.swift */,
+				154BD949237A67EA0059244C /* TokpedHeader.swift */,
+				154BD94B237A68830059244C /* TokpedError.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		154BD94D237A6B200059244C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				154BD94F237A6B320059244C /* Providers */,
+				154BD956237A8A870059244C /* NetworkConfiguration.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		154BD94E237A6B280059244C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				154BD950237A6B4C0059244C /* NetworkProvider.swift */,
+				154BD952237A6B790059244C /* RequestEncoding.swift */,
+				154BD964237A9D230059244C /* NetworkError.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		154BD94F237A6B320059244C /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				154BD94E237A6B280059244C /* Base */,
+				154BD954237A6C4A0059244C /* ProductNetworkProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		154BD958237A8C630059244C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				154BD959237A8C880059244C /* BundleExtension.swift */,
+				154BD95B237A8FEE0059244C /* MapperExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		154BD95F237A91D30059244C /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				154BD960237A91E10059244C /* RxViewModel.swift */,
+				154BD962237A92190059244C /* Paginatable.swift */,
+				154BD968237A9FA10059244C /* Coordinator.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		154BD96D237AA7770059244C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				154BD96E237AA79E0059244C /* R.generated.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		15C75E732375153500BFFB5E /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				154BD95F237A91D30059244C /* Protocol */,
+				154BD958237A8C630059244C /* Extension */,
+				154BD94D237A6B200059244C /* Networking */,
+				15C75E8823751EBA00BFFB5E /* Model */,
+				15C75E742375154700BFFB5E /* Components */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		15C75E742375154700BFFB5E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				15C75E75237515D000BFFB5E /* Product */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		15C75E75237515D000BFFB5E /* Product */ = {
+			isa = PBXGroup;
+			children = (
+				15C75E7A2375163800BFFB5E /* ProductItemView.swift */,
+				15C75E7C2375168000BFFB5E /* ProductItemView.xib */,
+			);
+			path = Product;
+			sourceTree = "<group>";
+		};
+		15C75E7E23751D9200BFFB5E /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				15C75E7F23751DA900BFFB5E /* Search */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		15C75E7F23751DA900BFFB5E /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				15C75E8223751DFD00BFFB5E /* Search.storyboard */,
+				15C75E8423751E2D00BFFB5E /* SearchViewController.swift */,
+				15C75E8623751E4100BFFB5E /* SearchViewModel.swift */,
+				154BD96A237AA0440059244C /* SearchCoordinator.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		15C75E8823751EBA00BFFB5E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				154BD946237A67220059244C /* Response */,
+				15C75E8923751ECB00BFFB5E /* Product.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		15D3720223750AF500682D2B = {
 			isa = PBXGroup;
 			children = (
 				15D3720D23750AF500682D2B /* Mini Project Tokopedia */,
 				15D3720C23750AF500682D2B /* Products */,
+				6C81DB3EF45881C280FB4D17 /* Pods */,
+				07B4947A954FE01420687CA2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +237,28 @@
 		15D3720D23750AF500682D2B /* Mini Project Tokopedia */ = {
 			isa = PBXGroup;
 			children = (
+				154BD96D237AA7770059244C /* Resources */,
+				15C75E732375153500BFFB5E /* Shared */,
+				15C75E7E23751D9200BFFB5E /* Modules */,
 				15D3720E23750AF500682D2B /* AppDelegate.swift */,
-				15D3721023750AF500682D2B /* SceneDelegate.swift */,
+				154BD970237AB62F0059244C /* SceneDelegate.swift */,
 				15D3721223750AF500682D2B /* ViewController.swift */,
+				154BD966237A9F540059244C /* AppCoordinator.swift */,
 				15D3721423750AF500682D2B /* Main.storyboard */,
 				15D3721723750AF800682D2B /* Assets.xcassets */,
 				15D3721923750AF800682D2B /* LaunchScreen.storyboard */,
 				15D3721C23750AF800682D2B /* Info.plist */,
 			);
 			path = "Mini Project Tokopedia";
+			sourceTree = "<group>";
+		};
+		6C81DB3EF45881C280FB4D17 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A3F6DE499B0AB0C86349244F /* Pods-Mini Project Tokopedia.debug.xcconfig */,
+				C48A7B7BA3DCB74DADC5E185 /* Pods-Mini Project Tokopedia.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +268,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15D3721F23750AF800682D2B /* Build configuration list for PBXNativeTarget "Mini Project Tokopedia" */;
 			buildPhases = (
+				550AEB2173B01FCD10CFC3CE /* [CP] Check Pods Manifest.lock */,
+				154BD96C237AA1F20059244C /* R.swift */,
 				15D3720723750AF500682D2B /* Sources */,
 				15D3720823750AF500682D2B /* Frameworks */,
 				15D3720923750AF500682D2B /* Resources */,
+				7501BDE542817B421C9F6881 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,19 +325,103 @@
 				15D3721B23750AF800682D2B /* LaunchScreen.storyboard in Resources */,
 				15D3721823750AF800682D2B /* Assets.xcassets in Resources */,
 				15D3721623750AF500682D2B /* Main.storyboard in Resources */,
+				15C75E7D2375168000BFFB5E /* ProductItemView.xib in Resources */,
+				15C75E8323751DFD00BFFB5E /* Search.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		154BD96C237AA1F20059244C /* R.swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$TEMP_DIR/rswift-lastrun",
+			);
+			name = R.swift;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n\n";
+		};
+		550AEB2173B01FCD10CFC3CE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mini Project Tokopedia-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7501BDE542817B421C9F6881 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mini Project Tokopedia/Pods-Mini Project Tokopedia-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mini Project Tokopedia/Pods-Mini Project Tokopedia-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mini Project Tokopedia/Pods-Mini Project Tokopedia-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		15D3720723750AF500682D2B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				154BD955237A6C4A0059244C /* ProductNetworkProvider.swift in Sources */,
+				15C75E8723751E4100BFFB5E /* SearchViewModel.swift in Sources */,
+				154BD96B237AA0440059244C /* SearchCoordinator.swift in Sources */,
+				15C75E8523751E2D00BFFB5E /* SearchViewController.swift in Sources */,
 				15D3721323750AF500682D2B /* ViewController.swift in Sources */,
+				154BD948237A67340059244C /* TokpedResponse.swift in Sources */,
+				154BD971237AB62F0059244C /* SceneDelegate.swift in Sources */,
+				154BD95C237A8FEE0059244C /* MapperExtension.swift in Sources */,
+				154BD963237A92190059244C /* Paginatable.swift in Sources */,
+				154BD951237A6B4C0059244C /* NetworkProvider.swift in Sources */,
+				154BD95A237A8C880059244C /* BundleExtension.swift in Sources */,
+				154BD94A237A67EA0059244C /* TokpedHeader.swift in Sources */,
 				15D3720F23750AF500682D2B /* AppDelegate.swift in Sources */,
-				15D3721123750AF500682D2B /* SceneDelegate.swift in Sources */,
+				154BD96F237AA79E0059244C /* R.generated.swift in Sources */,
+				154BD967237A9F540059244C /* AppCoordinator.swift in Sources */,
+				154BD94C237A68830059244C /* TokpedError.swift in Sources */,
+				154BD957237A8A870059244C /* NetworkConfiguration.swift in Sources */,
+				154BD961237A91E10059244C /* RxViewModel.swift in Sources */,
+				154BD953237A6B790059244C /* RequestEncoding.swift in Sources */,
+				15C75E7B2375163800BFFB5E /* ProductItemView.swift in Sources */,
+				15C75E8A23751ECB00BFFB5E /* Product.swift in Sources */,
+				154BD965237A9D230059244C /* NetworkError.swift in Sources */,
+				154BD969237A9FA10059244C /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +451,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				API_ENDPOINT = "https://ace.tokopedia.com";
+				API_PATH = "";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -230,6 +513,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				API_ENDPOINT = "https://ace.tokopedia.com";
+				API_PATH = "";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -282,6 +567,7 @@
 		};
 		15D3722023750AF800682D2B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3F6DE499B0AB0C86349244F /* Pods-Mini Project Tokopedia.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +586,7 @@
 		};
 		15D3722123750AF800682D2B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C48A7B7BA3DCB74DADC5E185 /* Pods-Mini Project Tokopedia.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
