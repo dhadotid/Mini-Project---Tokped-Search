@@ -9,7 +9,7 @@
 import RxSwift
 import RxCocoa
 
-class SearchViewModel: RxViewModel {
+class SearchViewModel: RxViewModel, Paginatable {
     
     typealias DataType = Event
     enum Event {
@@ -24,10 +24,18 @@ class SearchViewModel: RxViewModel {
     var isLoading: Bool = false
     
     func resetNextPage() {
-        nextPage = 1
+        nextPage = 0
     }
     
     var nextPage: Int? = nil
+    
+    var numberOfItems: Int {
+        return products.count
+    }
+    
+    func loadMoreAPICall(isReload: Bool) {
+        fetchAllData(isReload: isReload)
+    }
     
     var stateObservable = BehaviorRelay<ViewModelState<Event>>(value: .idle)
     var productNetworkProvider: ProductNetworkProvider
@@ -36,23 +44,23 @@ class SearchViewModel: RxViewModel {
     
     init(productNetworkProvider: ProductNetworkProvider = ProductNetworkClient()) {
         self.productNetworkProvider = productNetworkProvider
-        self.nextPage = 1
+        self.nextPage = 0
     }
     
     func fetchAllData(isReload: Bool){
         isLoading = true
         setState(.loading(nil))
-        nextPage = isReload ? 1 : nextPage
-        productNetworkProvider.fetchAllData()
+        nextPage = isReload ? 0 : nextPage
+        productNetworkProvider.fetchAllData(page: (nextPage ?? 0), perPage: 10)
         .subscribe(onSuccess: { [weak self] result in
                 if isReload {
                     self?.products = result.product
                     self?.setState(.completed(.loadInitialData(result.product)))
-                } else {
+                }else {
                     self?.products.append(contentsOf: result.product)
                     self?.setState(.completed(.loadMore(result.product)))
                 }
-                self?.nextPage = (self?.nextPage ?? 0) + 1
+                self?.nextPage = (self?.nextPage ?? 0) + 10
             if (self?.nextPage ?? 0) > (result.header?.total_data ?? 0) {
                     self?.nextPage = nil
                 }

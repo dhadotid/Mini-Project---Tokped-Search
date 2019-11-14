@@ -11,7 +11,7 @@ import RxSwift
 import ObjectMapper
 
 protocol ProductNetworkProvider {
-    func fetchAllData() -> Single<(product: [Product], header: TokpedHeader?)>
+    func fetchAllData(page: Int, perPage: Int) -> Single<(product: [Product], header: TokpedHeader?)>
 }
 
 class ProductNetworkClient: ProductNetworkProvider {
@@ -20,8 +20,8 @@ class ProductNetworkClient: ProductNetworkProvider {
         networkClient = networkProvider
     }
     
-    func fetchAllData() -> Single<(product: [Product], header: TokpedHeader?)> {
-        let pageUrl = TokpedAPI.search.urlString
+    func fetchAllData(page: Int, perPage: Int) -> Single<(product: [Product], header: TokpedHeader?)> {
+        let pageUrl = TokpedAPI.search(page, perPage).urlString
         
         return networkClient.get(urlString: pageUrl, queryItems: [:]).map { responseData -> ([Product], TokpedHeader?) in
             let response = try Mapper<TokpedResponse>().tryMap(JSONObject: responseData)

@@ -83,8 +83,11 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
 //    }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
+//        if scrollView.didScrollToBottom {
+//            delegate?.searchViewControllerRequestReload(self)
+//        }
         if scrollView.didScrollToBottom {
-            delegate?.searchViewControllerRequestReload(self)
+            viewModel.loadMore()
         }
     }
     
