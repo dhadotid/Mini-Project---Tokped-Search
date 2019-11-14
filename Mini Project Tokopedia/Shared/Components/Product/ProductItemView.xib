@@ -2,59 +2,65 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProductItemView" customModule="Mini_Project_Tokopedia" customModuleProvider="target">
-            <connections>
-                <outlet property="contentView" destination="3kP-6E-Axk" id="URr-jO-Zru"/>
-            </connections>
-        </placeholder>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="3kP-6E-Axk" userLabel="Content View">
-            <rect key="frame" x="0.0" y="0.0" width="283" height="273"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SearchCollectionViewCell" id="IYb-2h-q2q" customClass="ProductItemView" customModule="Mini_Project_Tokopedia" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="283" height="333"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="eYl-6n-PbK">
-                    <rect key="frame" x="8" y="8" width="267" height="257"/>
-                    <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QkA-r0-wrE">
-                            <rect key="frame" x="0.0" y="0.0" width="267" height="166"/>
-                        </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jumper Kaos Baju Bayi Karakter Pilot idjiwjdisoajwidsa" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5X-TZ-NfI">
-                            <rect key="frame" x="0.0" y="174" width="267" height="54.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rp. 50000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctP-Zy-zZc">
-                            <rect key="frame" x="0.0" y="236.5" width="267" height="20.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <color key="textColor" red="0.94333755970001221" green="0.40786210705078274" blue="0.15824928733444779" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                </stackView>
-            </subviews>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-            <constraints>
-                <constraint firstItem="eYl-6n-PbK" firstAttribute="leading" secondItem="mNg-Ub-SVu" secondAttribute="leading" constant="8" id="19S-Lo-ViW"/>
-                <constraint firstItem="eYl-6n-PbK" firstAttribute="top" secondItem="mNg-Ub-SVu" secondAttribute="top" constant="8" id="Vy4-I5-ttv"/>
-                <constraint firstItem="mNg-Ub-SVu" firstAttribute="bottom" secondItem="eYl-6n-PbK" secondAttribute="bottom" constant="8" id="ejI-ES-4vy"/>
-                <constraint firstAttribute="trailing" secondItem="eYl-6n-PbK" secondAttribute="trailing" constant="8" id="ojh-39-XfG"/>
-            </constraints>
-            <nil key="simulatedTopBarMetrics"/>
-            <nil key="simulatedBottomBarMetrics"/>
-            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="mNg-Ub-SVu"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Hly-Yp-Vkr">
+                <rect key="frame" x="0.0" y="0.0" width="283" height="333"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="rhS-My-OdP">
+                        <rect key="frame" x="5" y="5" width="273" height="323"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1Sn-7H-ExT">
+                                <rect key="frame" x="0.0" y="0.0" width="273" height="173.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jumper Kaos Baju Bayi Karakter Pilot idjiwjdisoajwidsa" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dA-HT-iUs">
+                                <rect key="frame" x="0.0" y="180.5" width="273" height="115"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rp. 50000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXe-Gp-J0F">
+                                <rect key="frame" x="0.0" y="302.5" width="273" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.94333755969999999" green="0.40786210709999998" blue="0.15824928730000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="wXe-Gp-J0F" secondAttribute="bottom" id="15w-zx-Kkg"/>
+                            <constraint firstItem="wXe-Gp-J0F" firstAttribute="top" secondItem="8dA-HT-iUs" secondAttribute="bottom" constant="7" id="A8u-DD-hUr"/>
+                            <constraint firstItem="8dA-HT-iUs" firstAttribute="top" secondItem="1Sn-7H-ExT" secondAttribute="bottom" constant="7" id="Ume-Yz-PZY"/>
+                            <constraint firstAttribute="trailing" secondItem="1Sn-7H-ExT" secondAttribute="trailing" id="XCs-dx-tEG"/>
+                            <constraint firstItem="1Sn-7H-ExT" firstAttribute="leading" secondItem="rhS-My-OdP" secondAttribute="leading" id="XdS-hX-V3Y"/>
+                            <constraint firstItem="wXe-Gp-J0F" firstAttribute="top" secondItem="8dA-HT-iUs" secondAttribute="bottom" constant="7" id="YLC-qF-c4d"/>
+                            <constraint firstItem="8dA-HT-iUs" firstAttribute="top" secondItem="1Sn-7H-ExT" secondAttribute="bottom" constant="7" id="f3K-0N-ZYN"/>
+                            <constraint firstItem="1Sn-7H-ExT" firstAttribute="top" secondItem="rhS-My-OdP" secondAttribute="top" id="hgr-gz-dCa"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="rhS-My-OdP" firstAttribute="leading" secondItem="Hly-Yp-Vkr" secondAttribute="leading" constant="5" id="8ZF-HB-nwi"/>
+                    <constraint firstAttribute="bottom" secondItem="rhS-My-OdP" secondAttribute="bottom" constant="5" id="C0a-8Q-LXN"/>
+                    <constraint firstAttribute="trailing" secondItem="rhS-My-OdP" secondAttribute="trailing" constant="5" id="mhF-Wf-CaI"/>
+                    <constraint firstItem="rhS-My-OdP" firstAttribute="top" secondItem="Hly-Yp-Vkr" secondAttribute="top" constant="5" id="wWS-kZ-W8w"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="283" height="333"/>
             <connections>
-                <outlet property="ivProduct" destination="QkA-r0-wrE" id="6ye-aQ-7Lb"/>
-                <outlet property="lblPrice" destination="ctP-Zy-zZc" id="jM8-Qn-9am"/>
-                <outlet property="lblProductName" destination="G5X-TZ-NfI" id="qNh-pB-w22"/>
+                <outlet property="ivProduct" destination="1Sn-7H-ExT" id="nOF-Zi-sp4"/>
+                <outlet property="lblPrice" destination="wXe-Gp-J0F" id="eEb-9b-vur"/>
+                <outlet property="lblProductName" destination="8dA-HT-iUs" id="QHM-XX-hbE"/>
             </connections>
-            <point key="canvasLocation" x="-564" y="-143.47826086956522"/>
-        </view>
+            <point key="canvasLocation" x="71.200000000000003" y="85.007496251874073"/>
+        </collectionViewCell>
     </objects>
 </document>

@@ -12,8 +12,8 @@ struct Product : Mappable {
     var id: Int?
     var name: String?
     var uri: String?
-    var image: String?
-    var image700: String?
+    var image: URL?
+    var image700: URL?
     var price: String?
     
     init?(map: Map) {}
@@ -22,8 +22,8 @@ struct Product : Mappable {
         id <- map["id"]
         name <- map["name"]
         uri <- map["uri"]
-        image <- map["image_uri"]
-        image700 <- map["image_uri_700"]
+        image <- (map["image_uri"], URLTransform())
+        image700 <- (map["image_uri_700"], URLTransform())
         price <- map["price"]
         
     }

@@ -9,7 +9,7 @@
 import RxSwift
 import RxCocoa
 
-class SearchViewModel: RxViewModel, Paginatable {
+class SearchViewModel: RxViewModel {
     
     typealias DataType = Event
     enum Event {
@@ -22,14 +22,6 @@ class SearchViewModel: RxViewModel, Paginatable {
     }
     
     var isLoading: Bool = false
-    
-    var numberOfItems: Int {
-        return products.count
-    }
-    
-    func loadMoreAPICall(isReload: Bool) {
-        fetchAllData(isReload: isReload)
-    }
     
     func resetNextPage() {
         nextPage = 1
@@ -77,7 +69,7 @@ extension SearchViewModel {
         return products.count
     }
     
-    func channel(at index: Int) -> Product? {
+    func product(at index: Int) -> Product? {
         guard 0..<numberOfProducts() ~= index else {
             return nil
         }

@@ -7,6 +7,7 @@ def utility_pods
   pod 'Alamofire', '~> 5.0.0-beta.6'
   pod 'ObjectMapper'
   pod 'R.swift'
+  pod 'Kingfisher'
 end
 
 target 'Mini Project Tokopedia' do

@@ -123,6 +123,30 @@ struct R: Rswift.Validatable {
   }
   #endif
 
+  /// This `R.image` struct is generated, and contains static references to 2 images.
+  struct image {
+    /// Image `place-holder-landscape`.
+    static let placeHolderLandscape = Rswift.ImageResource(bundle: R.hostingBundle, name: "place-holder-landscape")
+    /// Image `place-holder-portrait`.
+    static let placeHolderPortrait = Rswift.ImageResource(bundle: R.hostingBundle, name: "place-holder-portrait")
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "place-holder-landscape", bundle: ..., traitCollection: ...)`
+    static func placeHolderLandscape(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.placeHolderLandscape, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "place-holder-portrait", bundle: ..., traitCollection: ...)`
+    static func placeHolderPortrait(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.placeHolderPortrait, compatibleWith: traitCollection)
+    }
+    #endif
+
+    fileprivate init() {}
+  }
+
   /// This `R.nib` struct is generated, and contains static references to 1 nibs.
   struct nib {
     /// Nib `ProductItemView`.
@@ -136,9 +160,17 @@ struct R: Rswift.Validatable {
     }
     #endif
 
-    static func productItemView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-      return R.nib.productItemView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+    static func productItemView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ProductItemView? {
+      return R.nib.productItemView.instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ProductItemView
     }
+
+    fileprivate init() {}
+  }
+
+  /// This `R.reuseIdentifier` struct is generated, and contains static references to 1 reuse identifiers.
+  struct reuseIdentifier {
+    /// Reuse identifier `SearchCollectionViewCell`.
+    static let searchCollectionViewCell: Rswift.ReuseIdentifier<ProductItemView> = Rswift.ReuseIdentifier(identifier: "SearchCollectionViewCell")
 
     fileprivate init() {}
   }
@@ -165,12 +197,15 @@ struct _R: Rswift.Validatable {
 
   #if os(iOS) || os(tvOS)
   struct nib {
-    struct _ProductItemView: Rswift.NibResourceType {
+    struct _ProductItemView: Rswift.NibResourceType, Rswift.ReuseIdentifierType {
+      typealias ReusableType = ProductItemView
+
       let bundle = R.hostingBundle
+      let identifier = "SearchCollectionViewCell"
       let name = "ProductItemView"
 
-      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> UIKit.UIView? {
-        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? UIKit.UIView
+      func firstView(owner ownerOrNil: AnyObject?, options optionsOrNil: [UINib.OptionsKey : Any]? = nil) -> ProductItemView? {
+        return instantiate(withOwner: ownerOrNil, options: optionsOrNil)[0] as? ProductItemView
       }
 
       fileprivate init() {}

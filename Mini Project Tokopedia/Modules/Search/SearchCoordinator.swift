@@ -30,7 +30,7 @@ class SearchCoordinator: Coordinator {
     func makeViewController() -> SearchViewController {
         let viewController = R.storyboard.search.searchViewController()!
         viewController.viewModel = SearchViewModel()
-//        viewController.delegate = self
+        viewController.delegate = self
         return viewController
     }
 }
