@@ -97,3 +97,16 @@ extension DetachableCoordinator where Self: Coordinator {
         detachingHandler?(self)
     }
 }
+
+protocol ClosableCoordinator: DetachableCoordinator {
+    var canClose: Bool { get }
+}
+
+extension ClosableCoordinator {
+    func addCloseButtonIfNeeded(for viewController: UIViewController, selector: Selector) {
+        if canClose {
+            let closeButtonItem = UIBarButtonItem(title: "close", style: .plain, target: self, action: selector)
+            viewController.navigationItem.leftBarButtonItem = closeButtonItem
+        }
+    }
+}

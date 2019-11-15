@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ant-MA-yqB">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="3Hg-q4-eRg">
+            <objects>
+                <navigationController id="ant-MA-yqB" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1C6-lt-cE6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PdS-Vc-Zc9">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="Pad-i0-YhM" kind="relationship" relationship="rootViewController" id="Blc-vP-quD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XGL-BW-sPO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-858" y="126"/>
+        </scene>
+        <!--Filter View Controller-->
+        <scene sceneID="Gc9-rd-GQe">
+            <objects>
+                <viewController storyboardIdentifier="FilterViewController" id="Pad-i0-YhM" userLabel="Filter View Controller" customClass="FilterViewController" customModule="Mini_Project_Tokopedia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gJU-yr-yoQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="49" translatesAutoresizingMaskIntoConstraints="NO" id="DDk-sW-6rf">
+                                <rect key="frame" x="0.0" y="56" width="375" height="293"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jUu-3M-AS6" userLabel="Price Filter View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="128"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9lj-Dn-7Lk" userLabel="Shop Type Filter">
+                                        <rect key="frame" x="0.0" y="177" width="375" height="116"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shop Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkQ-UW-NR0" userLabel="Shop Type">
+                                                <rect key="frame" x="8" y="8" width="87" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSa-i4-xaA">
+                                                <rect key="frame" x="338" y="8" width="29" height="22"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button" image="ic_right_nav"/>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="9lj-Dn-7Lk" firstAttribute="top" secondItem="DDk-sW-6rf" secondAttribute="top" constant="177" id="WLX-Su-dwy"/>
+                                    <constraint firstItem="9lj-Dn-7Lk" firstAttribute="top" secondItem="jUu-3M-AS6" secondAttribute="bottom" constant="49" id="a1j-q5-eOC"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.89413815740000002" green="0.89410179850000004" blue="0.89411848780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="DDk-sW-6rf" firstAttribute="trailing" secondItem="pxe-im-KKM" secondAttribute="trailing" id="Ho8-dt-LoN"/>
+                            <constraint firstItem="DDk-sW-6rf" firstAttribute="leading" secondItem="pxe-im-KKM" secondAttribute="leading" id="Wkh-h2-4cu"/>
+                            <constraint firstItem="pxe-im-KKM" firstAttribute="bottom" secondItem="DDk-sW-6rf" secondAttribute="bottom" constant="318" id="gzD-ZZ-L4R"/>
+                            <constraint firstItem="DDk-sW-6rf" firstAttribute="top" secondItem="pxe-im-KKM" secondAttribute="top" constant="12" id="ooP-Jn-yXz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pxe-im-KKM"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Filter" leftItemsSupplementBackButton="YES" id="n2O-vt-oeY">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="ic_close" id="VtM-nl-h9m"/>
+                        <barButtonItem key="rightBarButtonItem" title="Reset" id="S3S-TT-BZd"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f5h-pH-HdL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.600000000000001" y="125.4872563718141"/>
+        </scene>
+        <!--Shop Type View Controller-->
+        <scene sceneID="8VX-fC-nT8">
+            <objects>
+                <viewController id="udn-vr-p5d" userLabel="Shop Type View Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ARN-8O-FQR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.89413815740000002" green="0.89410179850000004" blue="0.89411848780000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <viewLayoutGuide key="safeArea" id="13u-kD-sLa"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7ar-K4-c11" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="910" y="126"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_close" width="32" height="32"/>
+        <image name="ic_right_nav" width="32" height="32"/>
+    </resources>
+</document>

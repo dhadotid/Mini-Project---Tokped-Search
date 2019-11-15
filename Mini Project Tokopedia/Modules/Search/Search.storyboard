@@ -16,9 +16,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NRO-8g-lmE" userLabel="Product Collection View">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NRO-8g-lmE" userLabel="Product Collection View">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="613"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gr9-le-40H">
                                     <size key="itemSize" width="50" height="50"/>
@@ -41,8 +40,30 @@
                                     <outlet property="delegate" destination="VUY-5P-QJ6" id="Qw8-Hc-LKD"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9W-PK-0fl">
+                                <rect key="frame" x="0.0" y="621" width="375" height="46"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="66y-gu-wVz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Filter"/>
+                                <connections>
+                                    <action selector="onFilterButtonTapped" destination="VUY-5P-QJ6" eventType="touchUpInside" id="2UI-g3-jSB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="NRO-8g-lmE" firstAttribute="top" secondItem="kDF-aZ-qj2" secondAttribute="top" id="AxB-y7-Bv9"/>
+                            <constraint firstItem="n9W-PK-0fl" firstAttribute="trailing" secondItem="kDF-aZ-qj2" secondAttribute="trailing" id="Fd5-xh-V33"/>
+                            <constraint firstItem="NRO-8g-lmE" firstAttribute="trailing" secondItem="kDF-aZ-qj2" secondAttribute="trailing" id="JS8-18-hT6"/>
+                            <constraint firstItem="NRO-8g-lmE" firstAttribute="leading" secondItem="kDF-aZ-qj2" secondAttribute="leading" id="PkQ-w4-xyv"/>
+                            <constraint firstItem="n9W-PK-0fl" firstAttribute="top" secondItem="NRO-8g-lmE" secondAttribute="bottom" constant="8" id="UKA-5o-yor"/>
+                            <constraint firstItem="n9W-PK-0fl" firstAttribute="bottom" secondItem="kDF-aZ-qj2" secondAttribute="bottom" id="cua-yA-53G"/>
+                            <constraint firstItem="n9W-PK-0fl" firstAttribute="leading" secondItem="kDF-aZ-qj2" secondAttribute="leading" id="kKz-xo-LlE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kDF-aZ-qj2"/>
                     </view>
                     <connections>

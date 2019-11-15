@@ -41,6 +41,10 @@
 		15D3721623750AF500682D2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15D3721423750AF500682D2B /* Main.storyboard */; };
 		15D3721823750AF800682D2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15D3721723750AF800682D2B /* Assets.xcassets */; };
 		15D3721B23750AF800682D2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15D3721923750AF800682D2B /* LaunchScreen.storyboard */; };
+		15D6EC6E237E487F00946288 /* Filter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15D6EC6D237E487F00946288 /* Filter.storyboard */; };
+		15D6EC70237E50C000946288 /* FilterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D6EC6F237E50C000946288 /* FilterCoordinator.swift */; };
+		15D6EC72237E578C00946288 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D6EC71237E578C00946288 /* FilterViewController.swift */; };
+		15D6EC74237E597400946288 /* UINavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D6EC73237E597400946288 /* UINavigationController.swift */; };
 		9F8BFE8153958F679EBD44B3 /* Pods_Mini_Project_Tokopedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A16752FD8B1F10E5D0AC336 /* Pods_Mini_Project_Tokopedia.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +85,10 @@
 		15D3721723750AF800682D2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15D3721A23750AF800682D2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15D3721C23750AF800682D2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15D6EC6D237E487F00946288 /* Filter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Filter.storyboard; sourceTree = "<group>"; };
+		15D6EC6F237E50C000946288 /* FilterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCoordinator.swift; sourceTree = "<group>"; };
+		15D6EC71237E578C00946288 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		15D6EC73237E597400946288 /* UINavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationController.swift; sourceTree = "<group>"; };
 		4A16752FD8B1F10E5D0AC336 /* Pods_Mini_Project_Tokopedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mini_Project_Tokopedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3F6DE499B0AB0C86349244F /* Pods-Mini Project Tokopedia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mini Project Tokopedia.debug.xcconfig"; path = "Target Support Files/Pods-Mini Project Tokopedia/Pods-Mini Project Tokopedia.debug.xcconfig"; sourceTree = "<group>"; };
 		C48A7B7BA3DCB74DADC5E185 /* Pods-Mini Project Tokopedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mini Project Tokopedia.release.xcconfig"; path = "Target Support Files/Pods-Mini Project Tokopedia/Pods-Mini Project Tokopedia.release.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +161,7 @@
 				155FF02E237BB74C000F19BE /* UIImageViewExtension.swift */,
 				155FF030237BBEA9000F19BE /* UIScrollView.swift */,
 				15A71B1F237D34D300E043D7 /* UIDevice.swift */,
+				15D6EC73237E597400946288 /* UINavigationController.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -225,6 +234,7 @@
 		15C75E7E23751D9200BFFB5E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				15D6EC6C237E483100946288 /* Filter */,
 				15C75E7F23751DA900BFFB5E /* Search */,
 			);
 			path = Modules;
@@ -284,6 +294,16 @@
 				15D3721C23750AF800682D2B /* Info.plist */,
 			);
 			path = "Mini Project Tokopedia";
+			sourceTree = "<group>";
+		};
+		15D6EC6C237E483100946288 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				15D6EC6D237E487F00946288 /* Filter.storyboard */,
+				15D6EC6F237E50C000946288 /* FilterCoordinator.swift */,
+				15D6EC71237E578C00946288 /* FilterViewController.swift */,
+			);
+			path = Filter;
 			sourceTree = "<group>";
 		};
 		6C81DB3EF45881C280FB4D17 /* Pods */ = {
@@ -358,6 +378,7 @@
 			files = (
 				15D3721B23750AF800682D2B /* LaunchScreen.storyboard in Resources */,
 				15D3721823750AF800682D2B /* Assets.xcassets in Resources */,
+				15D6EC6E237E487F00946288 /* Filter.storyboard in Resources */,
 				15D3721623750AF500682D2B /* Main.storyboard in Resources */,
 				15C75E7D2375168000BFFB5E /* ProductItemView.xib in Resources */,
 				15C75E8323751DFD00BFFB5E /* Search.storyboard in Resources */,
@@ -433,6 +454,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15D6EC70237E50C000946288 /* FilterCoordinator.swift in Sources */,
 				154BD955237A6C4A0059244C /* ProductNetworkProvider.swift in Sources */,
 				15C75E8723751E4100BFFB5E /* SearchViewModel.swift in Sources */,
 				154BD96B237AA0440059244C /* SearchCoordinator.swift in Sources */,
@@ -441,6 +463,7 @@
 				154BD948237A67340059244C /* TokpedResponse.swift in Sources */,
 				15A71B20237D34D300E043D7 /* UIDevice.swift in Sources */,
 				155FF02A237BB43A000F19BE /* UICollectionView.swift in Sources */,
+				15D6EC74237E597400946288 /* UINavigationController.swift in Sources */,
 				154BD971237AB62F0059244C /* SceneDelegate.swift in Sources */,
 				154BD95C237A8FEE0059244C /* MapperExtension.swift in Sources */,
 				155FF02D237BB470000F19BE /* RefreshControl.swift in Sources */,
@@ -455,6 +478,7 @@
 				154BD94C237A68830059244C /* TokpedError.swift in Sources */,
 				154BD957237A8A870059244C /* NetworkConfiguration.swift in Sources */,
 				154BD961237A91E10059244C /* RxViewModel.swift in Sources */,
+				15D6EC72237E578C00946288 /* FilterViewController.swift in Sources */,
 				154BD953237A6B790059244C /* RequestEncoding.swift in Sources */,
 				155FF031237BBEA9000F19BE /* UIScrollView.swift in Sources */,
 				15C75E7B2375163800BFFB5E /* ProductItemView.swift in Sources */,

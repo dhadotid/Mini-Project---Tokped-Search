@@ -36,6 +36,13 @@ class SearchCoordinator: Coordinator {
 }
 
 extension SearchCoordinator: SearchViewControllerDelegate {
+    
+    func searchDidTapFilter(_ searchViewController: SearchViewController) {
+        let filterCoordinator = FilterCoordinator()
+        add(filterCoordinator)
+        filterCoordinator.start(sceneType: .present(searchViewController))
+    }
+    
     func searchController(_ sender: SearchViewController) {
         delegate?.searchCoordinator(coordinator: self)
     }

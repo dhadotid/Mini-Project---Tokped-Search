@@ -12,14 +12,14 @@ import RxSwift
 
 protocol SearchViewControllerDelegate: class {
     func searchController(_ sender: SearchViewController)
-    func searchViewControllerRequestReload(_ playlistDetailViewController: SearchViewController)
     func searchViewControllerBeginDragging(_ playlistDetailViewController: SearchViewController)
+    func searchDidTapFilter(_ searchViewController: SearchViewController)
 }
 
 extension SearchViewControllerDelegate {
     func searchController(_ sender: SearchViewController) {}
-    func searchViewControllerRequestReload(_ playlistDetailViewController: SearchViewController) {}
     func searchViewControllerBeginDragging(_ playlistDetailViewController: SearchViewController) {}
+    func searchDidTapFilter(_ searchViewController: SearchViewController) {}
 }
 
 class SearchViewController: UIViewController {
@@ -31,7 +31,7 @@ class SearchViewController: UIViewController {
     
     @IBOutlet weak var productCollectionView: UICollectionView! {
         didSet {
-//            productCollectionView.setupPullToRefresh(target: self, action: #selector(refreshControlValueChanged(_:)))
+            productCollectionView.setupPullToRefresh(target: self, action: #selector(refreshControlValueChanged(_:)))
             productCollectionView.setupAsCoversCollectionView()
         }
     }
@@ -51,10 +51,23 @@ class SearchViewController: UIViewController {
                 default: break
                 }
             }),
-//            bindToProgressHUD(with: viewModel, shouldShowLoading: false, shouldShowError: true)
+
         ])
         viewModel.fetchAllData(isReload: true)
     }
+    
+    @objc func refreshControlValueChanged(_ sender: UIRefreshControl) {
+        sender.endRefreshing()
+        viewModel.fetchAllData(isReload: true)
+    }
+    
+    // MARK: - Action
+
+    @IBAction func onFilterButtonTapped() {
+        print("HEHEHE")
+        delegate?.searchDidTapFilter(self)
+    }
+    
 }
 
 extension SearchViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -78,14 +91,7 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
 //        }
 //    }
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-//        return CGSize.zero
-//    }
-    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        if scrollView.didScrollToBottom {
-//            delegate?.searchViewControllerRequestReload(self)
-//        }
         if scrollView.didScrollToBottom {
             viewModel.loadMore()
         }

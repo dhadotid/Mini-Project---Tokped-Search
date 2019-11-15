@@ -89,14 +89,23 @@ struct R: Rswift.Validatable {
   }
 
   #if os(iOS) || os(tvOS)
-  /// This `R.storyboard` struct is generated, and contains static references to 3 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 4 storyboards.
   struct storyboard {
+    /// Storyboard `Filter`.
+    static let filter = _R.storyboard.filter()
     /// Storyboard `LaunchScreen`.
     static let launchScreen = _R.storyboard.launchScreen()
     /// Storyboard `Main`.
     static let main = _R.storyboard.main()
     /// Storyboard `Search`.
     static let search = _R.storyboard.search()
+
+    #if os(iOS) || os(tvOS)
+    /// `UIStoryboard(name: "Filter", bundle: ...)`
+    static func filter(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.filter)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UIStoryboard(name: "LaunchScreen", bundle: ...)`
@@ -123,12 +132,58 @@ struct R: Rswift.Validatable {
   }
   #endif
 
-  /// This `R.image` struct is generated, and contains static references to 2 images.
+  /// This `R.color` struct is generated, and contains static references to 2 colors.
+  struct color {
+    /// Color `blackBackground`.
+    static let blackBackground = Rswift.ColorResource(bundle: R.hostingBundle, name: "blackBackground")
+    /// Color `white`.
+    static let white = Rswift.ColorResource(bundle: R.hostingBundle, name: "white")
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "blackBackground", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func blackBackground(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.blackBackground, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "white", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func white(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.white, compatibleWith: traitCollection)
+    }
+    #endif
+
+    fileprivate init() {}
+  }
+
+  /// This `R.image` struct is generated, and contains static references to 4 images.
   struct image {
+    /// Image `ic_close`.
+    static let ic_close = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_close")
+    /// Image `ic_right_nav`.
+    static let ic_right_nav = Rswift.ImageResource(bundle: R.hostingBundle, name: "ic_right_nav")
     /// Image `place-holder-landscape`.
     static let placeHolderLandscape = Rswift.ImageResource(bundle: R.hostingBundle, name: "place-holder-landscape")
     /// Image `place-holder-portrait`.
     static let placeHolderPortrait = Rswift.ImageResource(bundle: R.hostingBundle, name: "place-holder-portrait")
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "ic_close", bundle: ..., traitCollection: ...)`
+    static func ic_close(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ic_close, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "ic_right_nav", bundle: ..., traitCollection: ...)`
+    static func ic_right_nav(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.ic_right_nav, compatibleWith: traitCollection)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UIImage(named: "place-holder-landscape", bundle: ..., traitCollection: ...)`
@@ -219,6 +274,9 @@ struct _R: Rswift.Validatable {
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
       #if os(iOS) || os(tvOS)
+      try filter.validate()
+      #endif
+      #if os(iOS) || os(tvOS)
       try launchScreen.validate()
       #endif
       #if os(iOS) || os(tvOS)
@@ -228,6 +286,30 @@ struct _R: Rswift.Validatable {
       try search.validate()
       #endif
     }
+
+    #if os(iOS) || os(tvOS)
+    struct filter: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = UIKit.UINavigationController
+
+      let bundle = R.hostingBundle
+      let filterViewController = StoryboardViewControllerResource<FilterViewController>(identifier: "FilterViewController")
+      let name = "Filter"
+
+      func filterViewController(_: Void = ()) -> FilterViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: filterViewController)
+      }
+
+      static func validate() throws {
+        if UIKit.UIImage(named: "ic_close", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ic_close' is used in storyboard 'Filter', but couldn't be loaded.") }
+        if UIKit.UIImage(named: "ic_right_nav", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ic_right_nav' is used in storyboard 'Filter', but couldn't be loaded.") }
+        if #available(iOS 11.0, tvOS 11.0, *) {
+        }
+        if _R.storyboard.filter().filterViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'filterViewController' could not be loaded from storyboard 'Filter' as 'FilterViewController'.") }
+      }
+
+      fileprivate init() {}
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     struct launchScreen: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {

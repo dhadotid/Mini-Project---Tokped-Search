@@ -27,7 +27,6 @@ class AppCoordinator: NSObject, Coordinator {
 // Navigating
 extension AppCoordinator {
     func openHomeScreen() {
-        print("HERE-----")
         if let window = window {
             let homeCoordinator = SearchCoordinator()
             add(homeCoordinator)
