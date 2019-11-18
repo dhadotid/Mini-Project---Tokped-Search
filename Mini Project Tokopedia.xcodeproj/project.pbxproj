@@ -30,6 +30,9 @@
 		155FF031237BBEA9000F19BE /* UIScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155FF030237BBEA9000F19BE /* UIScrollView.swift */; };
 		15A71B1E237D347E00E043D7 /* TkpConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A71B1D237D347E00E043D7 /* TkpConstant.swift */; };
 		15A71B20237D34D300E043D7 /* UIDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A71B1F237D34D300E043D7 /* UIDevice.swift */; };
+		15B35B1E23828E8D003CAB61 /* RangeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B35B1D23828E8D003CAB61 /* RangeSlider.swift */; };
+		15B35B2023828EAC003CAB61 /* RangeSliderThumbLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B35B1F23828EAC003CAB61 /* RangeSliderThumbLayer.swift */; };
+		15B35B2223828EC2003CAB61 /* RangeSliderTrackLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15B35B2123828EC2003CAB61 /* RangeSliderTrackLayer.swift */; };
 		15C75E7B2375163800BFFB5E /* ProductItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15C75E7A2375163800BFFB5E /* ProductItemView.swift */; };
 		15C75E7D2375168000BFFB5E /* ProductItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15C75E7C2375168000BFFB5E /* ProductItemView.xib */; };
 		15C75E8323751DFD00BFFB5E /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15C75E8223751DFD00BFFB5E /* Search.storyboard */; };
@@ -72,6 +75,9 @@
 		155FF030237BBEA9000F19BE /* UIScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIScrollView.swift; sourceTree = "<group>"; };
 		15A71B1D237D347E00E043D7 /* TkpConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TkpConstant.swift; sourceTree = "<group>"; };
 		15A71B1F237D34D300E043D7 /* UIDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDevice.swift; sourceTree = "<group>"; };
+		15B35B1D23828E8D003CAB61 /* RangeSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSlider.swift; sourceTree = "<group>"; };
+		15B35B1F23828EAC003CAB61 /* RangeSliderThumbLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSliderThumbLayer.swift; sourceTree = "<group>"; };
+		15B35B2123828EC2003CAB61 /* RangeSliderTrackLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RangeSliderTrackLayer.swift; sourceTree = "<group>"; };
 		15C75E7A2375163800BFFB5E /* ProductItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemView.swift; sourceTree = "<group>"; };
 		15C75E7C2375168000BFFB5E /* ProductItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductItemView.xib; sourceTree = "<group>"; };
 		15C75E8223751DFD00BFFB5E /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
@@ -187,6 +193,7 @@
 		155FF02B237BB45D000F19BE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				15B35B1C23828E6E003CAB61 /* RangeSlider */,
 				155FF02C237BB470000F19BE /* RefreshControl.swift */,
 			);
 			path = View;
@@ -198,6 +205,16 @@
 				15A71B1D237D347E00E043D7 /* TkpConstant.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		15B35B1C23828E6E003CAB61 /* RangeSlider */ = {
+			isa = PBXGroup;
+			children = (
+				15B35B1D23828E8D003CAB61 /* RangeSlider.swift */,
+				15B35B1F23828EAC003CAB61 /* RangeSliderThumbLayer.swift */,
+				15B35B2123828EC2003CAB61 /* RangeSliderTrackLayer.swift */,
+			);
+			path = RangeSlider;
 			sourceTree = "<group>";
 		};
 		15C75E732375153500BFFB5E /* Shared */ = {
@@ -469,7 +486,10 @@
 				155FF02D237BB470000F19BE /* RefreshControl.swift in Sources */,
 				154BD963237A92190059244C /* Paginatable.swift in Sources */,
 				154BD951237A6B4C0059244C /* NetworkProvider.swift in Sources */,
+				15B35B2023828EAC003CAB61 /* RangeSliderThumbLayer.swift in Sources */,
+				15B35B2223828EC2003CAB61 /* RangeSliderTrackLayer.swift in Sources */,
 				154BD95A237A8C880059244C /* BundleExtension.swift in Sources */,
+				15B35B1E23828E8D003CAB61 /* RangeSlider.swift in Sources */,
 				154BD94A237A67EA0059244C /* TokpedHeader.swift in Sources */,
 				15D3720F23750AF500682D2B /* AppDelegate.swift in Sources */,
 				154BD96F237AA79E0059244C /* R.generated.swift in Sources */,

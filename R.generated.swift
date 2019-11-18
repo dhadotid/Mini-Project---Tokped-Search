@@ -303,6 +303,8 @@ struct _R: Rswift.Validatable {
         if UIKit.UIImage(named: "ic_close", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ic_close' is used in storyboard 'Filter', but couldn't be loaded.") }
         if UIKit.UIImage(named: "ic_right_nav", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Image named 'ic_right_nav' is used in storyboard 'Filter', but couldn't be loaded.") }
         if #available(iOS 11.0, tvOS 11.0, *) {
+          if UIKit.UIColor(named: "blackBackground", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'blackBackground' is used in storyboard 'Filter', but couldn't be loaded.") }
+          if UIKit.UIColor(named: "white", in: R.hostingBundle, compatibleWith: nil) == nil { throw Rswift.ValidationError(description: "[R.swift] Color named 'white' is used in storyboard 'Filter', but couldn't be loaded.") }
         }
         if _R.storyboard.filter().filterViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'filterViewController' could not be loaded from storyboard 'Filter' as 'FilterViewController'.") }
       }

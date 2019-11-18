@@ -3,6 +3,7 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,10 +15,15 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1C6-lt-cE6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="white"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
+                        </textAttributes>
                     </navigationBar>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="PdS-Vc-Zc9">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
                     <connections>
                         <segue destination="Pad-i0-YhM" kind="relationship" relationship="rootViewController" id="Blc-vP-quD"/>
                     </connections>
@@ -76,8 +82,12 @@
                         <viewLayoutGuide key="safeArea" id="pxe-im-KKM"/>
                     </view>
                     <navigationItem key="navigationItem" title="Filter" leftItemsSupplementBackButton="YES" id="n2O-vt-oeY">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="ic_close" id="VtM-nl-h9m"/>
-                        <barButtonItem key="rightBarButtonItem" title="Reset" id="S3S-TT-BZd"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="ic_close" id="VtM-nl-h9m">
+                            <color key="tintColor" name="blackBackground"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Reset" id="S3S-TT-BZd">
+                            <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f5h-pH-HdL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -103,5 +113,11 @@
     <resources>
         <image name="ic_close" width="32" height="32"/>
         <image name="ic_right_nav" width="32" height="32"/>
+        <namedColor name="blackBackground">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
