@@ -14,12 +14,14 @@ protocol SearchViewControllerDelegate: class {
     func searchController(_ sender: SearchViewController)
     func searchViewControllerBeginDragging(_ playlistDetailViewController: SearchViewController)
     func searchDidTapFilter(_ searchViewController: SearchViewController)
+    func productDidTap(_ searchViewController: SearchViewController, selectedProduct: Product)
 }
 
 extension SearchViewControllerDelegate {
     func searchController(_ sender: SearchViewController) {}
     func searchViewControllerBeginDragging(_ playlistDetailViewController: SearchViewController) {}
     func searchDidTapFilter(_ searchViewController: SearchViewController) {}
+    func productDidTap(_ searchViewController: SearchViewController, selectedProduct: Product) {}
 }
 
 class SearchViewController: UIViewController {
@@ -84,12 +86,12 @@ extension SearchViewController: UICollectionViewDataSource, UICollectionViewDele
         return mediaCollectionViewCell
     }
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        if let selectedChannel = viewModel.channel(at: indexPath.row) {
-//           let allChannels = viewModel.channels
-//            delegate?.channelsDidTapLiveTVChannel(self, selectedChannel: selectedChannel, allChannels: allChannels)
-//        }
-//    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let selectedProduct = viewModel.product(at: indexPath.row){
+//            let allProducts = viewModel.products
+            delegate?.productDidTap(self, selectedProduct: selectedProduct)
+        }
+    }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView.didScrollToBottom {

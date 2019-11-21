@@ -11,7 +11,7 @@ import ObjectMapper
 struct Product : Mappable {
     var id: Int?
     var name: String?
-    var uri: String?
+    var uri: URL?
     var image: URL?
     var image700: URL?
     var price: String?
@@ -21,7 +21,7 @@ struct Product : Mappable {
     mutating func mapping(map: Map) {
         id <- map["id"]
         name <- map["name"]
-        uri <- map["uri"]
+        uri <- (map["uri"], URLTransform())
         image <- (map["image_uri"], URLTransform())
         image700 <- (map["image_uri_700"], URLTransform())
         price <- map["price"]

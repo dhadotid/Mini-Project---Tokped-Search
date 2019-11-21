@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1540D2FF238643E90045A8D9 /* DetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1540D2FE238643E90045A8D9 /* DetailCoordinator.swift */; };
+		15492D962383E87F00E66A1F /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15492D952383E87F00E66A1F /* Detail.storyboard */; };
+		15492D982383EDF600E66A1F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15492D972383EDF600E66A1F /* DetailViewController.swift */; };
 		154BD948237A67340059244C /* TokpedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154BD947237A67340059244C /* TokpedResponse.swift */; };
 		154BD94A237A67EA0059244C /* TokpedHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154BD949237A67EA0059244C /* TokpedHeader.swift */; };
 		154BD94C237A68830059244C /* TokpedError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 154BD94B237A68830059244C /* TokpedError.swift */; };
@@ -52,6 +55,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1540D2FE238643E90045A8D9 /* DetailCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCoordinator.swift; sourceTree = "<group>"; };
+		15492D952383E87F00E66A1F /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		15492D972383EDF600E66A1F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		154BD947237A67340059244C /* TokpedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokpedResponse.swift; sourceTree = "<group>"; };
 		154BD949237A67EA0059244C /* TokpedHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokpedHeader.swift; sourceTree = "<group>"; };
 		154BD94B237A68830059244C /* TokpedError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokpedError.swift; sourceTree = "<group>"; };
@@ -118,6 +124,16 @@
 				4A16752FD8B1F10E5D0AC336 /* Pods_Mini_Project_Tokopedia.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		15492D942383E86000E66A1F /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				1540D2FE238643E90045A8D9 /* DetailCoordinator.swift */,
+				15492D952383E87F00E66A1F /* Detail.storyboard */,
+				15492D972383EDF600E66A1F /* DetailViewController.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		154BD946237A67220059244C /* Response */ = {
@@ -251,6 +267,7 @@
 		15C75E7E23751D9200BFFB5E /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				15492D942383E86000E66A1F /* Detail */,
 				15D6EC6C237E483100946288 /* Filter */,
 				15C75E7F23751DA900BFFB5E /* Search */,
 			);
@@ -397,6 +414,7 @@
 				15D3721823750AF800682D2B /* Assets.xcassets in Resources */,
 				15D6EC6E237E487F00946288 /* Filter.storyboard in Resources */,
 				15D3721623750AF500682D2B /* Main.storyboard in Resources */,
+				15492D962383E87F00E66A1F /* Detail.storyboard in Resources */,
 				15C75E7D2375168000BFFB5E /* ProductItemView.xib in Resources */,
 				15C75E8323751DFD00BFFB5E /* Search.storyboard in Resources */,
 			);
@@ -481,6 +499,7 @@
 				15A71B20237D34D300E043D7 /* UIDevice.swift in Sources */,
 				155FF02A237BB43A000F19BE /* UICollectionView.swift in Sources */,
 				15D6EC74237E597400946288 /* UINavigationController.swift in Sources */,
+				1540D2FF238643E90045A8D9 /* DetailCoordinator.swift in Sources */,
 				154BD971237AB62F0059244C /* SceneDelegate.swift in Sources */,
 				154BD95C237A8FEE0059244C /* MapperExtension.swift in Sources */,
 				155FF02D237BB470000F19BE /* RefreshControl.swift in Sources */,
@@ -498,6 +517,7 @@
 				154BD94C237A68830059244C /* TokpedError.swift in Sources */,
 				154BD957237A8A870059244C /* NetworkConfiguration.swift in Sources */,
 				154BD961237A91E10059244C /* RxViewModel.swift in Sources */,
+				15492D982383EDF600E66A1F /* DetailViewController.swift in Sources */,
 				15D6EC72237E578C00946288 /* FilterViewController.swift in Sources */,
 				154BD953237A6B790059244C /* RequestEncoding.swift in Sources */,
 				155FF031237BBEA9000F19BE /* UIScrollView.swift in Sources */,

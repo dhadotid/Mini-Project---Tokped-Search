@@ -46,4 +46,14 @@ extension SearchCoordinator: SearchViewControllerDelegate {
     func searchController(_ sender: SearchViewController) {
         delegate?.searchCoordinator(coordinator: self)
     }
+    
+    func productDidTap(_ searchViewController: SearchViewController, selectedProduct: Product) {
+        let detailCoordinator = DetailCoordinator()
+        add(detailCoordinator)
+        detailCoordinator.detachingHandler = { [weak self] sender in
+            self?.remove(sender)
+        }
+        let detailPayload = DetailPayload(selectedProduct: selectedProduct)
+        detailCoordinator.start(sceneType: .present(searchViewController), payload: detailPayload)
+    }
 }

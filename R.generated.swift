@@ -89,8 +89,10 @@ struct R: Rswift.Validatable {
   }
 
   #if os(iOS) || os(tvOS)
-  /// This `R.storyboard` struct is generated, and contains static references to 4 storyboards.
+  /// This `R.storyboard` struct is generated, and contains static references to 5 storyboards.
   struct storyboard {
+    /// Storyboard `Detail`.
+    static let detail = _R.storyboard.detail()
     /// Storyboard `Filter`.
     static let filter = _R.storyboard.filter()
     /// Storyboard `LaunchScreen`.
@@ -99,6 +101,13 @@ struct R: Rswift.Validatable {
     static let main = _R.storyboard.main()
     /// Storyboard `Search`.
     static let search = _R.storyboard.search()
+
+    #if os(iOS) || os(tvOS)
+    /// `UIStoryboard(name: "Detail", bundle: ...)`
+    static func detail(_: Void = ()) -> UIKit.UIStoryboard {
+      return UIKit.UIStoryboard(resource: R.storyboard.detail)
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     /// `UIStoryboard(name: "Filter", bundle: ...)`
@@ -274,6 +283,9 @@ struct _R: Rswift.Validatable {
   struct storyboard: Rswift.Validatable {
     static func validate() throws {
       #if os(iOS) || os(tvOS)
+      try detail.validate()
+      #endif
+      #if os(iOS) || os(tvOS)
       try filter.validate()
       #endif
       #if os(iOS) || os(tvOS)
@@ -286,6 +298,28 @@ struct _R: Rswift.Validatable {
       try search.validate()
       #endif
     }
+
+    #if os(iOS) || os(tvOS)
+    struct detail: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {
+      typealias InitialController = DetailViewController
+
+      let bundle = R.hostingBundle
+      let detailViewController = StoryboardViewControllerResource<DetailViewController>(identifier: "DetailViewController")
+      let name = "Detail"
+
+      func detailViewController(_: Void = ()) -> DetailViewController? {
+        return UIKit.UIStoryboard(resource: self).instantiateViewController(withResource: detailViewController)
+      }
+
+      static func validate() throws {
+        if #available(iOS 11.0, tvOS 11.0, *) {
+        }
+        if _R.storyboard.detail().detailViewController() == nil { throw Rswift.ValidationError(description:"[R.swift] ViewController with identifier 'detailViewController' could not be loaded from storyboard 'Detail' as 'DetailViewController'.") }
+      }
+
+      fileprivate init() {}
+    }
+    #endif
 
     #if os(iOS) || os(tvOS)
     struct filter: Rswift.StoryboardResourceWithInitialControllerType, Rswift.Validatable {

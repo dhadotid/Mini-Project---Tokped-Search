@@ -10,12 +10,21 @@ import UIKit
 import RxSwift
 import RxCocoa
 
+protocol FilterViewControllerDelegate: class {
+    func filterDidClose(_ sender: FilterViewController)
+}
+
 class FilterViewController: UIViewController {
     
     var canSkip: Bool = false
     let disposeBag = DisposeBag()
     
-//    @IBOutlet weak var rangeSlider: RangeSlider!
+    weak var delegate: FilterViewController?
+    
+    @IBAction func filterCloseButton(_ sender: Any) {
+        delegate?.filterCloseButton(self)
+    }
+    //    @IBOutlet weak var rangeSlider: RangeSlider!
     let rangeSlider = RangeSlider(frame: CGRect.zero)
     
     override func viewDidLoad() {
@@ -34,6 +43,6 @@ class FilterViewController: UIViewController {
     }
     
     @objc func rangeSliderValueChanged(rangeSlider: RangeSlider) {
-        print("Range slider value changed: (\(rangeSlider.lowerValue) \(rangeSlider.upperValue))")
+//        print("Range slider value changed: (\(rangeSlider.lowerValue) \(rangeSlider.upperValue))")
     }
 }

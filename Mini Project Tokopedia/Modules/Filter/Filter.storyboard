@@ -84,6 +84,9 @@
                     <navigationItem key="navigationItem" title="Filter" leftItemsSupplementBackButton="YES" id="n2O-vt-oeY">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="ic_close" id="VtM-nl-h9m">
                             <color key="tintColor" name="blackBackground"/>
+                            <connections>
+                                <action selector="filterCloseButton:" destination="Pad-i0-YhM" id="CZZ-xP-qfo"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Reset" id="S3S-TT-BZd">
                             <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

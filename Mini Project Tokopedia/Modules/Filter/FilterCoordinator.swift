@@ -9,10 +9,15 @@
 import Foundation
 import UIKit
 
+protocol FilterCoordinatorDelegate: class {
+    func filterCoordinatorDidSkip(coordinator: FilterCoordinator)
+}
+
 class FilterCoordinator: ClosableCoordinator {
     var canClose: Bool
     var detachingHandler: Handler?
     var coordinators: [Coordinator] = []
+    weak var delegate: FilterCoordinatorDelegate?
     weak var navigationController: UINavigationController!
     var rootViewController: UIViewController? {
         return navigationController
